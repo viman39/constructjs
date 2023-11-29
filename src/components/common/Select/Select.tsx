@@ -1,13 +1,4 @@
-type Option = {
-  value: string;
-  title: string;
-};
-
-type SelectProps = {
-  name: string;
-  options: Option[];
-  onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
-};
+import { SelectProps } from "./select.types";
 
 export const Select: React.FC<SelectProps> = ({ name, options, onChange }) => {
   return (

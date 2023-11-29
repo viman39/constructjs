@@ -1,19 +1,16 @@
-import { Layer } from "../Layers/Layers";
+import { WallProps } from "./wall.types";
 import "./wall.scss";
-
-type WallProps = {
-  layers: Layer[];
-};
 
 export const Wall: React.FC<WallProps> = ({ layers }) => {
   return (
     <div className="wall">
       {layers.map((layer, index) => (
         <div
-          className={
-            layer.material?.color ? `layer-${layer.material?.color}` : ""
-          }
-          style={{ height: `${layer.thickness}px` }}
+          style={{
+            height: `${layer.thickness}px`,
+            width: "100%",
+            background: layer.material?.color,
+          }}
           key={index}
         ></div>
       ))}

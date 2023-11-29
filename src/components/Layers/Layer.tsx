@@ -2,26 +2,22 @@ import { Select } from "../common/Select/Select";
 import { Input } from "../common/Input/Input";
 import { Button } from "../common/Button/Button";
 import { Layer } from "./layers.types";
+import { useWallContext } from "../../context/Wall.context";
+import { mockMaterialOptions } from "../../__mocks__/materialMocks";
 
 type WallLayerProps = {
   layer: Layer;
-  materialOptions: { value: string; title: string }[];
-  updateLayer: (id: number, data: any) => void;
-  removeLayer: (id: number) => void;
 };
 
-export const WallLayer: React.FC<WallLayerProps> = ({
-  layer,
-  materialOptions,
-  updateLayer,
-  removeLayer,
-}) => {
+export const WallLayer: React.FC<WallLayerProps> = ({ layer }) => {
+  const { updateLayer, removeLayer } = useWallContext();
   const { id, material, thickness } = layer;
+
   return (
     <div>
       <Select
         name={`material${id}`}
-        options={materialOptions}
+        options={mockMaterialOptions}
         onChange={(e) => updateLayer(id, { material: e.target.value })}
       />
       <Input
@@ -29,7 +25,7 @@ export const WallLayer: React.FC<WallLayerProps> = ({
         type="number"
         onChange={(e) =>
           updateLayer(id, {
-            thickness: e.target.value === "" ? 0 : e.target.value,
+            thickness: e.target.value === "" ? 0 : parseFloat(e.target.value),
           })
         }
       />

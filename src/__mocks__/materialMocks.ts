@@ -1,7 +1,7 @@
 import { Material } from "../components/Layers/layers.types";
 
 export const mockMaterials: Material[] = [
-  { id: "0", name: "Select", price: 0 },
+  { id: "0", name: "Selecteaza", price: 0 },
   {
     id: "SBT650",
     name: "Sika bituseal T -650 MG HR (-15C)- 5 KG GREY SSH E 55 MG RO 5 KG",

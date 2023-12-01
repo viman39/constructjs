@@ -19,7 +19,7 @@ export const WallContextProvider: React.FC<WallContextProviderProps> = ({
       ...old,
       {
         id: old.length > 0 ? old[old.length - 1].id + 1 : 1,
-        material: undefined,
+        material: mockMaterials[0],
         thickness: 0,
       },
     ]);

@@ -21,7 +21,7 @@ export const WallLayer: React.FC<WallLayerProps> = ({ layer }) => {
         onChange={(e) => updateLayer(id, { material: e.target.value })}
       />
       <Input
-        placeholder="thickness"
+        placeholder="grosime"
         type="number"
         onChange={(e) =>
           updateLayer(id, {
@@ -29,12 +29,15 @@ export const WallLayer: React.FC<WallLayerProps> = ({ layer }) => {
           })
         }
       />
+      <Button onClick={() => removeLayer(id)}>-</Button>
+      {material && (
+        <span style={{ marginInline: "5px" }}>{`${material.price}lei`}</span>
+      )}
       {material && thickness > 0 && (
         <span style={{ marginInline: "5px" }}>{`~${
           (material.price * thickness) / 10
         }lei`}</span>
       )}
-      <Button onClick={() => removeLayer(id)}>-</Button>
     </div>
   );
 };

@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.45bcc3d2.css","mappings":"AAAA,MACE","sources":["components/Wall/wall.scss"],"sourcesContent":[".wall {\r\n  width: 500px;\r\n}\r\n"],"names":[],"sourceRoot":""}

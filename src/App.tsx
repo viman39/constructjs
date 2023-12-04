@@ -1,11 +1,11 @@
-import { Layers } from "./components/Layers/Layers";
-import { WallContextProvider } from "./context/Wall.context";
+import { Router } from "./Router";
+import { Layout } from "./components/Layout/Layout";
 
 function App() {
   return (
-    <WallContextProvider>
-      <Layers />
-    </WallContextProvider>
+    <Layout>
+      <Router></Router>
+    </Layout>
   );
 }
 

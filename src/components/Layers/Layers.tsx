@@ -1,4 +1,3 @@
-import { mockMaterials } from "../../__mocks__/materialMocks";
 import { Button } from "../common/Button/Button";
 import { Wall } from "../Wall/Wall";
 import { WallLayer } from "./Layer";
@@ -13,7 +12,6 @@ export const Layers = () => {
         <WallLayer layer={layer} key={layer.id} />
       ))}
       <Button onClick={addLayer}>+</Button>
-      <Wall />
     </>
   );
 };

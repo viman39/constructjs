@@ -1,0 +1,18 @@
+.grid-wrapper {
+  padding: 13px;
+  display: grid;
+  gap: 20px;
+  grid-template-areas:
+    "header"
+    "main";
+}
+
+.grid-header {
+  grid-area: header;
+  padding-bottom: 2px;
+  border-bottom: 3px groove #ff5722;
+}
+
+.grid-main {
+  grid-area: main;
+}

@@ -1,3 +1,4 @@
+import { Footer } from "../Footer/Footer";
 import { Header } from "../Header/Header";
 import "./layout.scss";
 
@@ -7,9 +8,10 @@ type LayoutProps = {
 
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="grid-wrapper">
+    <>
       <Header></Header>
       <main className="grid-main">{children}</main>
-    </div>
+      <Footer></Footer>
+    </>
   );
 };

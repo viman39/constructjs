@@ -1,0 +1,29 @@
+@import "./variables.scss";
+
+.text-primary {
+  color: $primary;
+}
+
+.text-danger {
+  color: $danger;
+}
+
+.text-secondary {
+  color: $secondary;
+}
+
+.text-facebook-blue {
+  color: $facebook-blue;
+}
+
+.text-dark-gray {
+  color: $dark-gray;
+}
+
+.text-black {
+  color: $black;
+}
+
+.text-link {
+  text-decoration: none;
+}

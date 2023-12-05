@@ -1,18 +1,34 @@
-.grid-wrapper {
-  padding: 13px;
+@import "../../variables.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
   display: grid;
-  gap: 20px;
   grid-template-areas:
     "header"
-    "main";
+    "main"
+    "footer";
+  grid-template-rows: auto 1fr auto; /* Header, Main, Footer */
 }
 
 .grid-header {
   grid-area: header;
+  margin: 13px;
   padding-bottom: 2px;
-  border-bottom: 3px groove #ff5722;
+  border-bottom: 3px groove $primary;
+}
+
+.grid-footer {
+  grid-area: footer;
+  margin: 5px 13px;
+  padding-left: 13px;
+  border-top: 1px solid $primary;
 }
 
 .grid-main {
   grid-area: main;
+  overflow-y: auto;
+  margin: 13px 0px 13px 13px;
+  padding-right: 13px;
 }

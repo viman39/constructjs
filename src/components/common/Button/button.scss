@@ -1,0 +1,27 @@
+@import "../../../variables.scss";
+
+.button {
+  background: $white;
+  cursor: pointer;
+  border-style: solid;
+
+  &.primary {
+    border-color: $primary;
+    transition: 0.3s;
+    &:hover {
+      background-color: rgba($primary, 0.075);
+    }
+  }
+
+  &.fullWidth {
+    width: 100%;
+  }
+
+  &.large {
+    font-size: large;
+  }
+
+  &.small {
+    font-size: small;
+  }
+}

@@ -3,6 +3,7 @@ import "./wall.scss";
 
 export const Wall: React.FC = () => {
   const { layers } = useWallContext();
+
   return (
     <div className="wall">
       {layers.map(

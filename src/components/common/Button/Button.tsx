@@ -7,11 +7,14 @@ export const Button: React.FC<ButtonProps> = ({
   fullWidth,
   onClick,
   children,
+  className,
 }) => {
   return (
     <button
       onClick={onClick}
-      className={`button ${color} ${size} ${fullWidth && "fullWidth"}`}
+      className={`button ${color} ${size} ${
+        fullWidth && "fullWidth"
+      } ${className}`}
     >
       {children}
     </button>

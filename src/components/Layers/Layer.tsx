@@ -7,11 +7,11 @@ import { useWallContext } from "../../context/Wall.context";
 import { mockMaterialOptions } from "../../__mocks__/materialMocks";
 import { numberFormat } from "../../utils/localization";
 
-type WallLayerProps = {
+type WallLayerProps = React.HTMLProps<HTMLDivElement> & {
   layer: Layer;
 };
 
-export const WallLayer: React.FC<WallLayerProps> = ({ layer }) => {
+export const WallLayer: React.FC<WallLayerProps> = ({ layer, className }) => {
   const { updateLayer, removeLayer } = useWallContext();
   const { id, material, thickness } = layer;
   const [price, setPrice] = useState<number>(material?.price ?? 0);
@@ -21,12 +21,13 @@ export const WallLayer: React.FC<WallLayerProps> = ({ layer }) => {
   }, [material?.id]);
 
   return (
-    <div>
+    <div className={className}>
       <Select
         name={`material${id}`}
         options={mockMaterialOptions}
         onChange={(e) => updateLayer(id, { material: e.target.value })}
       />
+      <br></br>
       <Input
         placeholder="grosime"
         type="number"

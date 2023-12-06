@@ -1,4 +1,4 @@
-export type ButtonProps = {
+export type ButtonProps = React.HTMLProps<HTMLButtonElement> & {
   color?: "primary";
   size?: "small" | "large";
   fullWidth?: boolean;

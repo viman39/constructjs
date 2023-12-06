@@ -2,6 +2,7 @@ import { Button } from "../common/Button/Button";
 import { WallLayer } from "./Layer";
 import { useWallContext } from "../../context/Wall.context";
 import { PlusCircle } from "react-feather";
+import { Divider } from "../common/Divider/Divider";
 
 export const Layers = () => {
   const { layers, addLayer } = useWallContext();
@@ -9,7 +10,7 @@ export const Layers = () => {
   return (
     <>
       {layers.map((layer) => (
-        <WallLayer layer={layer} key={layer.id} />
+        <WallLayer layer={layer} key={layer.id} className="mb-sm" />
       ))}
       <Button onClick={addLayer} color="primary" fullWidth={true}>
         <PlusCircle size="12px" /> Adauga strat

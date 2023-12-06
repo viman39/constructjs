@@ -7,7 +7,7 @@ export const Calculator = () => {
     <div>
       <WallContextProvider>
         <Layers></Layers>
-        <Wall></Wall>
+        <Wall className="mt-md"></Wall>
       </WallContextProvider>
     </div>
   );

@@ -2,7 +2,6 @@ import { Button } from "../common/Button/Button";
 import { WallLayer } from "./Layer";
 import { useWallContext } from "../../context/Wall.context";
 import { PlusCircle } from "react-feather";
-import { Divider } from "../common/Divider/Divider";
 
 export const Layers = () => {
   const { layers, addLayer } = useWallContext();

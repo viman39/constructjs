@@ -1,7 +1,51 @@
 @import "../../variables.scss";
 
+.grid-header {
+  grid-area: header;
+  padding: 13px;
+  background: linear-gradient(to right, #360b7b 0%, #003a9c 100%);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-routes {
+  display: none;
+  justify-content: space-between;
+  min-width: 600px;
+
+  @media (min-width: $layout-breakpoint-small) {
+    display: flex;
+  }
+}
+
+.contact-button {
+  display: none;
+
+  @media (min-width: $layout-breakpoint-small) {
+    display: block;
+  }
+}
+
+.navbar-button {
+  display: block;
+
+  @media (min-width: $layout-breakpoint-small) {
+    display: none;
+  }
+}
+
 .nav-link {
   text-decoration: none;
   padding: 2px;
-  color: $black;
+  color: $white;
+  padding-bottom: 2px;
+
+  &:hover {
+    border-bottom: 3px groove $white;
+    font-size: large;
+    transition-timing-function: ease;
+    transition-duration: 0.5s;
+  }
 }

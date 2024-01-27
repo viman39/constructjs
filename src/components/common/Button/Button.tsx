@@ -13,7 +13,7 @@ export const Button: React.FC<ButtonProps> = ({
     <button
       onClick={onClick}
       className={`button ${color} ${size} ${
-        fullWidth && "fullWidth"
+        fullWidth && "full-width"
       } ${className}`}
     >
       {children}

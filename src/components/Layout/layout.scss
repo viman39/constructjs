@@ -12,13 +12,6 @@ body {
   grid-template-rows: auto 1fr auto; /* Header, Main, Footer */
 }
 
-.grid-header {
-  grid-area: header;
-  margin: 13px;
-  padding-bottom: 2px;
-  border-bottom: 3px groove $primary;
-}
-
 .grid-footer {
   grid-area: footer;
   margin: 5px 13px;

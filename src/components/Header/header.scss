@@ -20,14 +20,6 @@
   }
 }
 
-.contact-button {
-  display: none;
-
-  @media (min-width: $layout-breakpoint-small) {
-    display: block;
-  }
-}
-
 .navbar-button {
   display: block;
 

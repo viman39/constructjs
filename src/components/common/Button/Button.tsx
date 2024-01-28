@@ -2,8 +2,8 @@ import { ButtonProps } from "./button.types";
 import "./button.scss";
 
 export const Button: React.FC<ButtonProps> = ({
+  type = "button",
   color,
-  size = "small",
   fullWidth,
   onClick,
   children,
@@ -12,7 +12,7 @@ export const Button: React.FC<ButtonProps> = ({
   return (
     <button
       onClick={onClick}
-      className={`button ${color} ${size} ${
+      className={`btn ${type} ${color} ${
         fullWidth && "full-width"
       } ${className}`}
     >

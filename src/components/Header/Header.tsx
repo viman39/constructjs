@@ -16,8 +16,10 @@ export const Header = () => {
             {title}
           </Link>
         ))}
+        <Button type="text" className="nav-link" size={undefined}>
+          Contact
+        </Button>
       </div>
-      <Button className="contact-button">Contact</Button>
       <Button className="navbar-button">
         <Menu />
       </Button>

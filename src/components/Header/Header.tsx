@@ -42,8 +42,8 @@ export const Header = () => {
             </Link>
           </Button>
         ))}
-        <Button type="text" className="nav-link" size={undefined}>
-          Contact
+        <Button type="text" size={undefined}>
+          <span className="nav-link">Contact</span>
         </Button>
       </div>
       <span ref={drawerButtonRef} className="navbar-button">

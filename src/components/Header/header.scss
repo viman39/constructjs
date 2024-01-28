@@ -12,11 +12,41 @@
 
 .header-routes {
   display: none;
-  justify-content: space-between;
-  min-width: 600px;
+
+  &.open {
+    display: flex;
+    position: fixed;
+    padding: 12px;
+    right: 0;
+    top: 76px;
+    background: #003a9c;
+    flex-direction: column;
+    min-width: 250px;
+    height: 100vh;
+
+    button {
+      width: 100%;
+      text-align: start;
+      display: inline-block;
+      border-bottom: 1px solid $white;
+      margin-top: 7px;
+
+      &:last-child {
+        border-bottom: 0px;
+      }
+
+      &:hover {
+        font-size: large;
+        transition-timing-function: ease;
+        transition-duration: 0.5s;
+      }
+    }
+  }
 
   @media (min-width: $layout-breakpoint-small) {
     display: flex;
+    min-width: 630px;
+    justify-content: space-between;
   }
 }
 
@@ -30,14 +60,15 @@
 
 .nav-link {
   text-decoration: none;
-  padding: 2px;
   color: $white;
   padding-bottom: 2px;
 
-  &:hover {
-    border-bottom: 3px groove $white;
-    font-size: large;
-    transition-timing-function: ease;
-    transition-duration: 0.5s;
+  @media (min-width: $layout-breakpoint-small) {
+    &:hover {
+      border-bottom: 3px groove $white;
+      font-size: large;
+      transition-timing-function: ease;
+      transition-duration: 0.5s;
+    }
   }
 }

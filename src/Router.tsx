@@ -25,12 +25,12 @@ export const ROUTES = [
   {
     path: WATERPROOFING_PATH,
     page: <Dashboard />,
-    title: "Sisteme impermeabilizare",
+    title: "Sisteme Impermeabilizare",
   },
   {
     path: CALCULATOR_PATH,
     page: <Calculator />,
-    title: "Estimator costuri",
+    title: "Estimator Costuri",
   },
   {
     path: PORTOFOLIO_PATH,

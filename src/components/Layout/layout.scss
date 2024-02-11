@@ -3,6 +3,9 @@
 body {
   margin: 0;
   padding: 0;
+}
+
+#root {
   height: 100vh;
   display: grid;
   grid-template-areas:
@@ -21,7 +24,6 @@ body {
 
 .grid-main {
   grid-area: main;
-  overflow-y: auto;
-  margin: 13px 0px 13px 13px;
+  margin: 89px 0px 13px 13px;
   padding-right: 13px;
 }

@@ -2,6 +2,9 @@
 
 .grid-header {
   grid-area: header;
+  position: fixed;
+  width: -webkit-fill-available;
+  top: 0;
   padding: 13px;
   background: linear-gradient(to right, #360b7b 0%, #003a9c 100%);
   height: 50px;

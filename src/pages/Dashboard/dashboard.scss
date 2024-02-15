@@ -1,0 +1,41 @@
+@import "../../variables.scss";
+
+.home-section {
+  height: 60dvh;
+  width: 100%;
+  font-size: 26px;
+  background: $background;
+  color: white;
+  border-radius: 100% / 0 0 40% 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-style: italic;
+
+  h1 {
+    margin: 0;
+  }
+
+  span {
+    font-weight: bold;
+  }
+
+  @media (max-width: $layout-breakpoint-small) {
+    border-radius: 100% / 0 0 20% 20%;
+  }
+}
+
+.aboutus-section {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  margin: 3rem 2rem;
+
+  div {
+    text-align: justify;
+  }
+}

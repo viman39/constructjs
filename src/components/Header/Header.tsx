@@ -4,6 +4,7 @@ import { DASHBOARD_PATH, ROUTES } from "../../Router";
 import { Button } from "../common/Button/Button";
 import { Menu } from "react-feather";
 import { useState, useRef, useEffect } from "react";
+import { scrollContactIntoView } from "../Footer/Footer";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,7 +43,7 @@ export const Header = () => {
             </Link>
           </Button>
         ))}
-        <Button type="text" size={undefined}>
+        <Button type="text" size={undefined} onClick={scrollContactIntoView}>
           <span className="nav-link">Contact</span>
         </Button>
       </div>

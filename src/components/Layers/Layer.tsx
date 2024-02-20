@@ -44,13 +44,9 @@ export const WallLayer: React.FC<WallLayerProps> = ({ layer, className }) => {
         onChange={(e) => setPrice(numberFormat(e.target.value))}
       />
       <Button onClick={() => removeLayer(id)}>-</Button>
-      {material && (
-        <span style={{ marginInline: "5px" }}>{`${material.price}lei`}</span>
-      )}
+      {material && <span className="mx-xs">{`${material.price}lei`}</span>}
       {material && thickness > 0 && (
-        <span style={{ marginInline: "5px" }}>{`~${
-          price * thickness
-        }lei`}</span>
+        <span className="mx-xs">{`~${price * thickness}lei`}</span>
       )}
     </div>
   );

@@ -69,7 +69,7 @@
   @media (min-width: $layout-breakpoint-small) {
     &:hover {
       border-bottom: 3px groove $white;
-      font-size: large;
+      // font-size: large;
       transition-timing-function: ease;
       transition-duration: 0.5s;
     }

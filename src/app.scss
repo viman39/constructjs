@@ -24,71 +24,85 @@
   color: $black;
 }
 
+.text-white {
+  color: $white;
+}
+
 .text-link {
   text-decoration: none;
 }
 
 /* Margin Utilities */
+.mx-xs {
+  margin-right: $margin-xs;
+  margin-left: $margin-xs;
+}
+
 .mt-xs {
-  margin-top: 0.5rem;
+  margin-top: $margin-xs;
 }
 
 .mr-xs {
-  margin-right: 0.5rem;
+  margin-right: $margin-xs;
 }
 
 .mb-xs {
-  margin-bottom: 0.5rem;
+  margin-bottom: $margin-xs;
 }
 
 .ml-xs {
-  margin-left: 0.5rem;
+  margin-left: $margin-xs;
+}
+
+.mx-sm {
+  margin-right: $margin-sm;
+  margin-left: $margin-sm;
 }
 
 .mt-sm {
-  margin-top: 1rem;
+  margin-top: $margin-sm;
 }
 
 .mr-sm {
-  margin-right: 1rem;
+  margin-right: $margin-sm;
 }
 
 .mb-sm {
-  margin-bottom: 1rem;
+  margin-bottom: $margin-sm;
 }
 
 .ml-sm {
-  margin-left: 1rem;
+  margin-left: $margin-sm;
 }
 
 .mt-md {
-  margin-top: 1.5rem;
+  margin-top: $margin-md;
 }
 
 .mr-md {
-  margin-right: 1.5rem;
+  margin-right: $margin-md;
 }
 
 .mb-md {
-  margin-bottom: 1.5rem;
+  margin-bottom: $margin-md;
 }
 
 .ml-md {
-  margin-left: 1.5rem;
+  margin-left: $margin-md;
 }
 
 .mt-lg {
-  margin-top: 2rem;
+  margin-top: $margin-lg;
 }
 
 .mr-lg {
-  margin-right: 2rem;
+  margin-right: $margin-lg;
 }
 
 .mb-lg {
-  margin-bottom: 2rem;
+  margin-bottom: $margin-lg;
 }
 
 .ml-lg {
-  margin-left: 2rem;
+  margin-left: $margin-lg;
 }

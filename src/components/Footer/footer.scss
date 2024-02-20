@@ -1,0 +1,13 @@
+@import "../../variables.scss";
+
+.grid-footer {
+  grid-area: footer;
+  padding: 5px 13px;
+  background: $background;
+  height: 200px;
+  border-radius: 40%/ 20% 20% 0 0;
+
+  @media (max-width: $layout-breakpoint-small) {
+    border-radius: 40% / 10% 10% 0 0;
+  }
+}

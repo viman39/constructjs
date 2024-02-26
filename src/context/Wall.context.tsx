@@ -57,13 +57,9 @@ export const WallContextProvider: React.FC<WallContextProviderProps> = ({
 
 export const useWallContext = (): WallContextState => {
   const context = useContext(WallContext);
-  if (context === null)
-    return {
-      layers: [],
-      addLayer: () => {},
-      updateLayer: () => {},
-      removeLayer: () => {},
-    };
+  if (!context) {
+    throw new Error("useWallContect must be used within WallContextProvider");
+  }
 
   return context;
 };

@@ -1,10 +1,9 @@
 import { Heart, Facebook } from "react-feather";
 import "./footer.scss";
+import { scrollElementIntoView } from "../../utils/dom";
 
 export const scrollContactIntoView = () => {
-  document
-    .getElementById("contactUs-footer")
-    ?.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+  scrollElementIntoView("contactUs-footer");
 };
 
 export const Footer = () => {

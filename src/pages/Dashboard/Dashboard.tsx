@@ -1,15 +1,24 @@
+import { useEffect, useState } from "react";
 import "./dashboard.scss";
+import { scrollElementIntoView } from "../../utils/dom";
+import { useLocation } from "react-router-dom";
 
 export const Dashboard = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    scrollElementIntoView(hash || "#logo");
+  }, [hash]);
+
   return (
     <>
-      <div className="home-section">
+      <div className="home-section" id="#logo">
         <h1>LespeziArt Con</h1> <br />
         <span>
           Izolații care rezistă timpului, la înălțimea așteptărilor tale!
         </span>
       </div>
-      <div className="aboutus-section">
+      <div className="aboutus-section" id="#aboutUs">
         <div>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod
           dolor sed turpis lacinia suscipit. Integer porta vitae erat in
@@ -86,6 +95,9 @@ export const Dashboard = () => {
           magna est, vehicula at luctus eget, finibus eget mi. Aenean interdum
           velit id nibh posuere porttitor.
         </div>
+      </div>
+      <div className="sisteme-section" id="#waterproofing">
+        SISTEME AICEA
       </div>
     </>
   );

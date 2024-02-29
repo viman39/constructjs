@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "./dashboard.scss";
 import { scrollElementIntoView } from "../../utils/dom";
 import { useLocation } from "react-router-dom";
@@ -19,6 +19,52 @@ export const Dashboard = () => {
         </span>
       </div>
       <div className="aboutus-section" id="#aboutUs">
+        <div>
+          <svg width="400" height="400" viewBox="0 0 100 100">
+            <defs>
+              <path
+                id="triangle-path"
+                d="M 50 20 L 50 20 80 80 20 80 Z"
+                stroke="black"
+                stroke-width="3px"
+              />
+
+              <path
+                id="roundTriangle"
+                d="M 57 35 L 57 35 72 65 C 72 65 80 80 65 80 L 35 80 C 35 80 20 80 27 65 L 42 35 C 42 35 50 20 57 35 "
+              />
+
+              <clipPath id="triangleCutout">
+                <use href="#roundTriangle" />
+              </clipPath>
+            </defs>
+
+            <use
+              href="#roundTriangle"
+              fill="red"
+              transform="rotate(45 50 50)"
+            />
+            <use
+              href="#roundTriangle"
+              fill="yellow"
+              transform="rotate(30 50 50)"
+            />
+            <use
+              href="#roundTriangle"
+              transform="rotate(15 50 50)"
+              stroke="black"
+              stroke-width="2px"
+              fill="transparent"
+            />
+            <image
+              href="/constructjs/assets/logo.png"
+              width="100%"
+              height="100%"
+              clip-path="url(#triangleCutout)"
+              transform="rotate(15 50 50)"
+            />
+          </svg>
+        </div>
         <div>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod
           dolor sed turpis lacinia suscipit. Integer porta vitae erat in

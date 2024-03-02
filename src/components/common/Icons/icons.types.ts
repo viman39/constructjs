@@ -4,9 +4,6 @@ export type PathProps = {
   id: string;
 };
 
-export type TrianglesProps = {
-  triangles: {
-    transform: string;
-    fill: string;
-  }[];
+export type DoubleTriangleImageProps = {
+  image: string;
 };

@@ -43,10 +43,10 @@
     }
   }
 
-  @media (max-width: $layout-breakpoint-small) {
+  @media (max-width: $layout-breakpoint-mobile) {
     border-radius: 40% / 10% 10% 0 0;
     align-items: center;
-    height: 45dvh;
+    height: 60dvh;
 
     > div {
       flex-direction: column;
@@ -57,5 +57,10 @@
         margin-top: 5dvh;
       }
     }
+  }
+
+  @media (min-width: $layout-breakpoint-mobile) and (max-width: $layout-breakpoint-tablet) {
+    padding-top: 5dvh;
+    height: 40dvh;
   }
 }

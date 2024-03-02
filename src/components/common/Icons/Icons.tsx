@@ -1,4 +1,5 @@
-import { SVGProps, PathProps, TrianglesProps } from "./icons.types";
+import { SVGProps, PathProps, DoubleTriangleImageProps } from "./icons.types";
+import "./icons.scss";
 
 const SVG: React.FC<SVGProps> = ({ children }) => {
   return (
@@ -17,35 +18,52 @@ const RoundTrianglePath: React.FC<PathProps> = ({ id }) => (
   />
 );
 
-const Triangles: React.FC<TrianglesProps> = ({ triangles }) => (
+export const DoubleTriangleLeft: React.FC<DoubleTriangleImageProps> = ({
+  image,
+}) => (
   <SVG>
     <defs>
-      <RoundTrianglePath id="roundTriangle" />
-      <clipPath id="triangleCutout">
-        <use href="#roundTriangle" />
+      <RoundTrianglePath id="roundTriangleLeft" />
+      <clipPath id="triangleCutoutLeft">
+        <use href="#roundTriangleLeft" transform="rotate(30 80 60)" />
       </clipPath>
     </defs>
 
-    {triangles.map(({ fill, transform }) => (
-      <use href="#roundTriangle" fill={fill} transform={transform} />
-    ))}
+    <use
+      href="#roundTriangleLeft"
+      className="triangle-logo-primary-color"
+      transform="rotate(45 70 60)"
+    />
+    <image
+      href={image}
+      width="100%"
+      height="100%"
+      clipPath="url(#triangleCutoutLeft)"
+    />
   </SVG>
 );
 
-export const DoubleTriangleRight = () => (
-  <Triangles
-    triangles={[
-      { fill: "red", transform: "rotate(45 70 60)" },
-      { fill: "yellow", transform: "rotate(30 80 60)" },
-    ]}
-  />
-);
+export const DoubleTriangleRight: React.FC<DoubleTriangleImageProps> = ({
+  image,
+}) => (
+  <SVG>
+    <defs>
+      <RoundTrianglePath id="roundTriangleRight" />
+      <clipPath id="triangleCutoutRight">
+        <use href="#roundTriangleRight" transform="rotate(-30 20 60)" />
+      </clipPath>
+    </defs>
 
-export const DoubleTriangleLeft = () => (
-  <Triangles
-    triangles={[
-      { fill: "red", transform: "rotate(-45 30 60)" },
-      { fill: "yellow", transform: "rotate(-30 20 60)" },
-    ]}
-  />
+    <use
+      href="#roundTriangleRight"
+      className="triangle-logo-primary-color"
+      transform="rotate(-45 30 60)"
+    />
+    <image
+      href={image}
+      width="100%"
+      height="100%"
+      clipPath="url(#triangleCutoutRight)"
+    />
+  </SVG>
 );

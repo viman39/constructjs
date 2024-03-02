@@ -4,7 +4,7 @@
   grid-area: footer;
   padding: 5px 13px;
   background: $background;
-  height: 30dvh;
+  height: 250px;
   border-radius: 40%/ 20% 20% 0 0;
   display: flex;
   flex-direction: column;
@@ -12,7 +12,7 @@
   box-shadow: 0px -2px 4px black;
 
   > div {
-    margin-top: 3dvh;
+    margin-top: 50px;
     display: flex;
     color: $white;
     justify-content: space-around;
@@ -46,7 +46,7 @@
   @media (max-width: $layout-breakpoint-mobile) {
     border-radius: 40% / 10% 10% 0 0;
     align-items: center;
-    height: 60dvh;
+    height: 400px;
 
     > div {
       flex-direction: column;
@@ -57,10 +57,5 @@
         margin-top: 5dvh;
       }
     }
-  }
-
-  @media (min-width: $layout-breakpoint-mobile) and (max-width: $layout-breakpoint-tablet) {
-    padding-top: 5dvh;
-    height: 40dvh;
   }
 }

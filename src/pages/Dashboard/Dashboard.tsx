@@ -24,7 +24,7 @@ export const Dashboard = () => {
     <>
       <div className="home-section" id="#logo">
         <h1>LespeziArt Con</h1> <br />
-        <span>
+        <span className="mx-xs">
           Izolații care rezistă timpului, la înălțimea așteptărilor tale!
         </span>
       </div>

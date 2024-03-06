@@ -67,3 +67,9 @@ export const DoubleTriangleRight: React.FC<DoubleTriangleImageProps> = ({
     />
   </SVG>
 );
+
+export const CurvedRectangle: React.FC<DoubleTriangleImageProps> = ({
+  image,
+}) => {
+  return <img src={image} alt="portofoliu" width="100%" height="100%"></img>;
+};

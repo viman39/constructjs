@@ -1,0 +1,44 @@
+@import "../../variables.scss";
+
+.portofolio {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background: $background;
+  display: flex;
+  justify-content: center;
+  color: $white;
+  z-index: -1;
+
+  h2 {
+    padding-top: 3rem;
+  }
+}
+
+.projects {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  margin-bottom: 100px;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 270px;
+  }
+
+  h3 {
+    margin-bottom: 0px;
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  @media (max-width: $layout-breakpoint-mobile) {
+    grid-template-columns: 1fr;
+  }
+}

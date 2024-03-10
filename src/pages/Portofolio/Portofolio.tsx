@@ -15,7 +15,7 @@ export const Portofolio = () => {
   return (
     <>
       <div className="portofolio">
-        <h2>Portofoliu</h2>
+        <h1>Portofoliu</h1>
       </div>
       <div className="projects">
         {PORTOFOLIO.map(({ title, description, image }, index) =>

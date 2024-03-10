@@ -23,15 +23,35 @@ export const DoubleTriangleLeft: React.FC<CutoutProps> = ({ image }) => (
     <defs>
       <RoundTrianglePath id="roundTriangleLeft" />
       <clipPath id="triangleCutoutLeft">
-        <use href="#roundTriangleLeft" transform="rotate(30 80 60)" />
+        <use href="#roundTriangleLeft" transform="rotate(30 80 60)">
+          <animateTransform
+            attributeName="transform"
+            attributeType="XML"
+            type="rotate"
+            from="0 80 60 "
+            to="30 80 60"
+            dur="1s"
+            repeatCount="1"
+          />
+        </use>
       </clipPath>
     </defs>
 
     <use
       href="#roundTriangleLeft"
       className="triangle-logo-primary-color"
-      transform="rotate(45 70 60)"
-    />
+      transform="rotate(40 70 60)"
+    >
+      <animateTransform
+        attributeName="transform"
+        attributeType="XML"
+        type="rotate"
+        from="0 70 60 "
+        to="40 70 60"
+        dur="0.5s"
+        repeatCount="1"
+      />
+    </use>
     <image
       href={image}
       width="100%"
@@ -46,7 +66,17 @@ export const DoubleTriangleRight: React.FC<CutoutProps> = ({ image }) => (
     <defs>
       <RoundTrianglePath id="roundTriangleRight" />
       <clipPath id="triangleCutoutRight">
-        <use href="#roundTriangleRight" transform="rotate(-30 20 60)" />
+        <use href="#roundTriangleRight" transform="rotate(-30 20 60)">
+          <animateTransform
+            attributeName="transform"
+            attributeType="XML"
+            type="rotate"
+            from="0 20 60 "
+            to="-30 20 60"
+            dur="0.5s"
+            repeatCount="1"
+          />
+        </use>
       </clipPath>
     </defs>
 
@@ -54,7 +84,17 @@ export const DoubleTriangleRight: React.FC<CutoutProps> = ({ image }) => (
       href="#roundTriangleRight"
       className="triangle-logo-primary-color"
       transform="rotate(-45 30 60)"
-    />
+    >
+      <animateTransform
+        attributeName="transform"
+        attributeType="XML"
+        type="rotate"
+        from="0 30 60 "
+        to="-45 30 60"
+        dur="1s"
+        repeatCount="1"
+      />
+    </use>
     <image
       href={image}
       width="100%"

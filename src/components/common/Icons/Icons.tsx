@@ -1,4 +1,4 @@
-import { SVGProps, PathProps, DoubleTriangleImageProps } from "./icons.types";
+import { SVGProps, PathProps, CutoutProps } from "./icons.types";
 import "./icons.scss";
 
 const SVG: React.FC<SVGProps> = ({ children }) => {
@@ -18,9 +18,7 @@ const RoundTrianglePath: React.FC<PathProps> = ({ id }) => (
   />
 );
 
-export const DoubleTriangleLeft: React.FC<DoubleTriangleImageProps> = ({
-  image,
-}) => (
+export const DoubleTriangleLeft: React.FC<CutoutProps> = ({ image }) => (
   <SVG>
     <defs>
       <RoundTrianglePath id="roundTriangleLeft" />
@@ -43,9 +41,7 @@ export const DoubleTriangleLeft: React.FC<DoubleTriangleImageProps> = ({
   </SVG>
 );
 
-export const DoubleTriangleRight: React.FC<DoubleTriangleImageProps> = ({
-  image,
-}) => (
+export const DoubleTriangleRight: React.FC<CutoutProps> = ({ image }) => (
   <SVG>
     <defs>
       <RoundTrianglePath id="roundTriangleRight" />
@@ -68,8 +64,46 @@ export const DoubleTriangleRight: React.FC<DoubleTriangleImageProps> = ({
   </SVG>
 );
 
-export const CurvedRectangle: React.FC<DoubleTriangleImageProps> = ({
-  image,
-}) => {
-  return <img src={image} alt="portofoliu" width="100%" height="100%"></img>;
+export const CurvedRectangleLeft: React.FC<CutoutProps> = ({ image }) => {
+  return (
+    <SVG>
+      <defs>
+        <clipPath id="curvedRectangleLeftCutout">
+          <path
+            d="M 0 0 L 95 0 C 95 0 80 20 90 40, 90 40 112 70 90 100 L 0 100 Z"
+            stroke="black"
+            id="curvedRectangleLeft"
+          />
+        </clipPath>
+      </defs>
+
+      <image
+        href={image}
+        height="100%"
+        clipPath="url(#curvedRectangleLeftCutout)"
+      />
+    </SVG>
+  );
+};
+
+export const CurvedRectangleRight: React.FC<CutoutProps> = ({ image }) => {
+  return (
+    <SVG>
+      <defs>
+        <clipPath id="curvedRectangleRightCutout">
+          <path
+            d="M 5 0 L 100 0 100 100 10 100 C 10 100 30 70 10 40, 10 40 -8 20 5 0 Z"
+            stroke="black"
+            id="curvedRectangleRight"
+          />
+        </clipPath>
+      </defs>
+
+      <image
+        href={image}
+        height="100%"
+        clipPath="url(#curvedRectangleRightCutout)"
+      />
+    </SVG>
+  );
 };

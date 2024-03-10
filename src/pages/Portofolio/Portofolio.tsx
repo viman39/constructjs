@@ -1,4 +1,7 @@
-import { CurvedRectangle } from "../../components/common/Icons/Icons";
+import {
+  CurvedRectangleLeft,
+  CurvedRectangleRight,
+} from "../../components/common/Icons/Icons";
 import {
   SCREEN_BREAKPOINT_MOBILE,
   useBreakPoint,
@@ -18,20 +21,20 @@ export const Portofolio = () => {
         {PORTOFOLIO.map(({ title, description, image }, index) =>
           index % 2 === 0 ? (
             <>
+              {isMobile && <CurvedRectangleRight image={image} />}
               <div>
-                <h1>{title}</h1>
+                <h1 className="text-logo-primary">{title}</h1>
                 <p>{description}</p>
               </div>
-              <CurvedRectangle image={image} />
+              {!isMobile && <CurvedRectangleRight image={image} />}
             </>
           ) : (
             <>
-              {!isMobile && <CurvedRectangle image={image} />}
+              <CurvedRectangleLeft image={image} />
               <div>
-                <h1>{title}</h1>
+                <h1 className="text-logo-primary">{title}</h1>
                 <p>{description}</p>
               </div>
-              {isMobile && <CurvedRectangle image={image} />}
             </>
           )
         )}

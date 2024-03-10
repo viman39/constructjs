@@ -4,6 +4,6 @@ export type PathProps = {
   id: string;
 };
 
-export type DoubleTriangleImageProps = {
+export type CutoutProps = {
   image: string;
 };

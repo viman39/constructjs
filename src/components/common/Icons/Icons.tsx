@@ -26,11 +26,10 @@ export const DoubleTriangleLeft: React.FC<CutoutProps> = ({ image }) => (
         <use href="#roundTriangleLeft" transform="rotate(30 80 60)">
           <animateTransform
             attributeName="transform"
-            attributeType="XML"
             type="rotate"
             from="0 80 60 "
             to="30 80 60"
-            dur="1s"
+            dur="1.2s"
             repeatCount="1"
           />
         </use>
@@ -44,11 +43,10 @@ export const DoubleTriangleLeft: React.FC<CutoutProps> = ({ image }) => (
     >
       <animateTransform
         attributeName="transform"
-        attributeType="XML"
         type="rotate"
         from="0 70 60 "
         to="40 70 60"
-        dur="0.5s"
+        dur="0.8s"
         repeatCount="1"
       />
     </use>
@@ -69,11 +67,10 @@ export const DoubleTriangleRight: React.FC<CutoutProps> = ({ image }) => (
         <use href="#roundTriangleRight" transform="rotate(-30 20 60)">
           <animateTransform
             attributeName="transform"
-            attributeType="XML"
             type="rotate"
             from="0 20 60 "
             to="-30 20 60"
-            dur="0.5s"
+            dur="0.8s"
             repeatCount="1"
           />
         </use>
@@ -87,11 +84,10 @@ export const DoubleTriangleRight: React.FC<CutoutProps> = ({ image }) => (
     >
       <animateTransform
         attributeName="transform"
-        attributeType="XML"
         type="rotate"
         from="0 30 60 "
         to="-45 30 60"
-        dur="1s"
+        dur="1.2s"
         repeatCount="1"
       />
     </use>

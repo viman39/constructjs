@@ -16,10 +16,11 @@
   }
 
   &.primary {
-    border-color: $primary;
+    border-color: $logo-primary;
+    border-radius: 10px;
     transition: 0.3s;
     &:hover {
-      background-color: rgba($primary, 0.075);
+      background-color: rgba($logo-primary, 0.075);
     }
   }
 

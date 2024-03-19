@@ -6,11 +6,12 @@ import {
   DoubleTriangleLeft,
   DoubleTriangleRight,
 } from "../../components/common/Icons/Icons";
-import { ABOUT_US } from "./dashboard.constants";
+import { ABOUT_US, CAROUSEL_ITEMS } from "./dashboard.constants";
 import {
   SCREEN_BREAKPOINT_MOBILE,
   useBreakPoint,
 } from "../../utils/hooks/useScreenSize";
+import { Carousel } from "../../components/common/Carousel/Carousel";
 
 export const Dashboard = () => {
   const { hash } = useLocation();
@@ -51,7 +52,7 @@ export const Dashboard = () => {
         )}
       </div>
       <div className="sisteme-section" id="#waterproofing">
-        SISTEME AICEA
+        <Carousel carouselItems={CAROUSEL_ITEMS} />
       </div>
     </>
   );

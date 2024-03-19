@@ -18,3 +18,31 @@ export const ABOUT_US = [
     image: "/constructjs/assets/OIG4.jpeg",
   },
 ];
+
+export const CAROUSEL_ITEMS = [
+  {
+    title: "Carousel item 1",
+    longDescription: "this is very long description ONE",
+    shortDescription: "this is short description 1",
+    imagePath: "/constructjs/assets/CAROUSEL1.jpeg",
+  },
+  {
+    title: "Carousel item 2",
+    longDescription: "this is very long description TWO",
+    shortDescription:
+      "this is short description 2, but a little longer to check how it affects component auto height",
+    imagePath: "/constructjs/assets/CAROUSEL2.jpg",
+  },
+  {
+    title: "Carousel item 3",
+    longDescription: "this is very long description THREE",
+    shortDescription: "this is short description 3",
+    imagePath: "/constructjs/assets/CAROUSEL3.jpeg",
+  },
+  {
+    title: "Carousel item 4",
+    longDescription: "this is very long description FOUR",
+    shortDescription: "this is short description 4",
+    imagePath: "",
+  },
+];

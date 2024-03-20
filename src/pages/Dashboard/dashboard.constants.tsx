@@ -24,13 +24,15 @@ export const ABOUT_US = [
 export const CAROUSEL_ITEMS: CarouselItemType[] = [
   {
     title: "Carousel item 1",
-    longDescription: "this is very long description ONE",
+    longDescription:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tellus libero, semper non est sed, tempus mattis dolor. Morbi eget urna interdum, dapibus arcu ac, faucibus lectus. Vestibulum vitae nunc lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer nisi orci, sagittis tempus rhoncus vel, maximus nec leo. Pellentesque eu interdum odio. Aenean commodo a odio eget imperdiet.    ",
     shortDescription: "this is short description 1",
     imagePath: "/constructjs/assets/CAROUSEL1.jpeg",
   },
   {
     title: "Carousel item 2",
-    longDescription: "this is very long description TWO",
+    longDescription:
+      "Sed et blandit nulla. Pellentesque sed ipsum vel neque malesuada lobortis ut ut augue. Vivamus vel orci mauris. Mauris tristique a turpis quis facilisis. Donec dolor dui, iaculis eget rhoncus eget, tincidunt in enim. Fusce quis mi vitae lorem consequat aliquam. Donec aliquam magna nec quam interdum, mattis dapibus est auctor. Maecenas in volutpat libero, vel malesuada nisi.    ",
     shortDescription:
       "this is short description 2, but a little longer to check how it affects component auto height",
     imagePath: "/constructjs/assets/CAROUSEL2.jpg",

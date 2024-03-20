@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { memo, useEffect } from "react";
 import "./dashboard.scss";
 import { scrollElementIntoView } from "../../utils/dom";
 import { useLocation } from "react-router-dom";
@@ -17,9 +17,65 @@ import {
 } from "../../components/common/Carousel/Carousel";
 import { Button } from "../../components/common/Button/Button";
 
+const HomeSection = memo(() => (
+  <div className="home-section" id="#logo">
+    <h1>LespeziArt Con</h1> <br />
+    <span className="mx-xs">
+      Izolații care rezistă timpului, la înălțimea așteptărilor tale!
+    </span>
+  </div>
+));
+
+const AboutUsSection = () => {
+  const isMobile = useBreakPoint(SCREEN_BREAKPOINT_MOBILE);
+
+  return (
+    <div className="aboutus-section" id="#aboutUs">
+      {ABOUT_US.map(({ title, description, image }, index) =>
+        index % 2 === 0 ? (
+          <>
+            {isMobile && <DoubleTriangleRight image={image} />}
+            <div>
+              <h1>{title}</h1>
+              <p>{description}</p>
+            </div>
+            {!isMobile && <DoubleTriangleRight image={image} />}
+          </>
+        ) : (
+          <>
+            <DoubleTriangleLeft image={image} />
+            <div>
+              <h1>{title}</h1>
+              <p>{description}</p>
+            </div>
+          </>
+        )
+      )}
+    </div>
+  );
+};
+
+const WaterproofingSection = () => (
+  <div className="sisteme-section" id="#waterproofing">
+    <Carousel>
+      {CAROUSEL_ITEMS.map(({ imagePath, title, shortDescription }) => (
+        <CarouselItem>
+          <div>
+            <img src={imagePath} alt={imagePath} width="100%" />
+            <h3 className="my-xs">{title}</h3>
+            <p>{shortDescription}</p>
+          </div>
+          <Button color="primary" className="m-sm">
+            Mai multe
+          </Button>
+        </CarouselItem>
+      ))}
+    </Carousel>
+  </div>
+);
+
 export const Dashboard = () => {
   const { hash } = useLocation();
-  const isMobile = useBreakPoint(SCREEN_BREAKPOINT_MOBILE);
 
   useEffect(() => {
     scrollElementIntoView(hash || "#logo");
@@ -27,50 +83,9 @@ export const Dashboard = () => {
 
   return (
     <>
-      <div className="home-section" id="#logo">
-        <h1>LespeziArt Con</h1> <br />
-        <span className="mx-xs">
-          Izolații care rezistă timpului, la înălțimea așteptărilor tale!
-        </span>
-      </div>
-      <div className="aboutus-section" id="#aboutUs">
-        {ABOUT_US.map(({ title, description, image }, index) =>
-          index % 2 === 0 ? (
-            <>
-              {isMobile && <DoubleTriangleRight image={image} />}
-              <div>
-                <h1>{title}</h1>
-                <p>{description}</p>
-              </div>
-              {!isMobile && <DoubleTriangleRight image={image} />}
-            </>
-          ) : (
-            <>
-              <DoubleTriangleLeft image={image} />
-              <div>
-                <h1>{title}</h1>
-                <p>{description}</p>
-              </div>
-            </>
-          )
-        )}
-      </div>
-      <div className="sisteme-section" id="#waterproofing">
-        <Carousel>
-          {CAROUSEL_ITEMS.map(({ imagePath, title, shortDescription }) => (
-            <CarouselItem>
-              <div>
-                <img src={imagePath} alt={imagePath} width="100%" />
-                <h3 className="my-xs">{title}</h3>
-                <p>{shortDescription}</p>
-              </div>
-              <Button color="primary" className="m-sm">
-                Mai multe
-              </Button>
-            </CarouselItem>
-          ))}
-        </Carousel>
-      </div>
+      <HomeSection />
+      <AboutUsSection />
+      <WaterproofingSection />
     </>
   );
 };

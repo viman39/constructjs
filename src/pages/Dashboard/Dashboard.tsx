@@ -11,7 +11,11 @@ import {
   SCREEN_BREAKPOINT_MOBILE,
   useBreakPoint,
 } from "../../utils/hooks/useScreenSize";
-import { Carousel } from "../../components/common/Carousel/Carousel";
+import {
+  Carousel,
+  CarouselItem,
+} from "../../components/common/Carousel/Carousel";
+import { Button } from "../../components/common/Button/Button";
 
 export const Dashboard = () => {
   const { hash } = useLocation();
@@ -52,7 +56,20 @@ export const Dashboard = () => {
         )}
       </div>
       <div className="sisteme-section" id="#waterproofing">
-        <Carousel carouselItems={CAROUSEL_ITEMS} />
+        <Carousel>
+          {CAROUSEL_ITEMS.map(({ imagePath, title, shortDescription }) => (
+            <CarouselItem>
+              <div>
+                <img src={imagePath} alt={imagePath} width="100%" />
+                <h3 className="my-xs">{title}</h3>
+                <p>{shortDescription}</p>
+              </div>
+              <Button color="primary" className="m-sm">
+                Mai multe
+              </Button>
+            </CarouselItem>
+          ))}
+        </Carousel>
       </div>
     </>
   );

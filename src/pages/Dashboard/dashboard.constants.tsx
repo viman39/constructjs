@@ -1,3 +1,5 @@
+import { CarouselItemType } from "../../components/common/Carousel/carousel.types";
+
 export const ABOUT_US = [
   {
     title: "LespeziArt -Con",
@@ -19,7 +21,7 @@ export const ABOUT_US = [
   },
 ];
 
-export const CAROUSEL_ITEMS = [
+export const CAROUSEL_ITEMS: CarouselItemType[] = [
   {
     title: "Carousel item 1",
     longDescription: "this is very long description ONE",

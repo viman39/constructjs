@@ -6,9 +6,9 @@ export type CarouselItemType = {
 };
 
 export type CarouselItemProps = {
-  item: CarouselItemType;
+  children: React.ReactNode;
 };
 
 export type CarouselProps = {
-  carouselItems: CarouselItemType[];
+  children: React.ReactNode[];
 };

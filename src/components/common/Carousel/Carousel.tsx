@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { CarouselItem } from "./CarouselItem";
-import { CarouselProps } from "./carousel.types";
+import { CarouselItemProps, CarouselProps } from "./carousel.types";
 import { Button } from "../Button/Button";
 import { CheckCircle, ChevronLeft, ChevronRight, Circle } from "react-feather";
 import {
@@ -8,22 +7,23 @@ import {
   SCREEN_BREAKPOINT_TABLET,
   useBreakPoint,
 } from "../../../utils/hooks/useScreenSize";
+import "./carousel.scss";
 
-export const Carousel: React.FC<CarouselProps> = ({ carouselItems }) => {
+export const Carousel: React.FC<CarouselProps> = ({ children }) => {
   const isMobile = useBreakPoint(SCREEN_BREAKPOINT_MOBILE);
   const isTablet = useBreakPoint(SCREEN_BREAKPOINT_TABLET);
   const [activeItemIndex, setActiveItemIndex] = useState(0);
-  const itemsLength = carouselItems.length;
+  const itemsLength = children.length;
 
-  const activeItem = carouselItems[activeItemIndex];
+  const activeItem = children[activeItemIndex];
   const nextItem =
     activeItemIndex === itemsLength - 1
-      ? carouselItems[0]
-      : carouselItems[activeItemIndex + 1];
+      ? children[0]
+      : children[activeItemIndex + 1];
   const previousItem =
     activeItemIndex === 0
-      ? carouselItems[itemsLength - 1]
-      : carouselItems[activeItemIndex - 1];
+      ? children[itemsLength - 1]
+      : children[activeItemIndex - 1];
 
   const updateActiveItem = (index: number) => {
     if (index >= itemsLength) {
@@ -45,9 +45,9 @@ export const Carousel: React.FC<CarouselProps> = ({ carouselItems }) => {
         >
           <ChevronLeft />
         </Button>
-        {!isMobile && <CarouselItem item={previousItem} />}
-        <CarouselItem item={activeItem} />
-        {!isTablet && <CarouselItem item={nextItem} />}
+        {!isTablet && previousItem}
+        {activeItem}
+        {!isMobile && nextItem}
         <Button
           type="text"
           onClick={() => updateActiveItem(activeItemIndex + 1)}
@@ -57,11 +57,11 @@ export const Carousel: React.FC<CarouselProps> = ({ carouselItems }) => {
         </Button>
       </div>
       <div className="carouselFooter">
-        {carouselItems.map((item, index) => (
+        {children.map((_, index) => (
           <Button
             type="text"
             onClick={() => updateActiveItem(index)}
-            key={item.title}
+            key={index}
           >
             {index === activeItemIndex ? (
               <CheckCircle
@@ -77,4 +77,8 @@ export const Carousel: React.FC<CarouselProps> = ({ carouselItems }) => {
       </div>
     </div>
   );
+};
+
+export const CarouselItem: React.FC<CarouselItemProps> = ({ children }) => {
+  return <div className="carouselItem">{children}</div>;
 };

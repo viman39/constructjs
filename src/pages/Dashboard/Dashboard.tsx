@@ -69,7 +69,7 @@ const WaterproofingSection = () => (
             <FlipCard>
               <FlipCardBack>
                 <div className="dashboard-flip-card-back">
-                  {longDescription}
+                  <p>{longDescription}</p>
                 </div>
               </FlipCardBack>
               <FlipCardFront>

@@ -34,7 +34,7 @@ export const CAROUSEL_ITEMS: CarouselItemType[] = [
     longDescription:
       "Sed et blandit nulla. Pellentesque sed ipsum vel neque malesuada lobortis ut ut augue. Vivamus vel orci mauris. Mauris tristique a turpis quis facilisis. Donec dolor dui, iaculis eget rhoncus eget, tincidunt in enim. Fusce quis mi vitae lorem consequat aliquam. Donec aliquam magna nec quam interdum, mattis dapibus est auctor. Maecenas in volutpat libero, vel malesuada nisi.    ",
     shortDescription:
-      "this is short description 2, but a little longer to check how it affects component auto height",
+      "this is short description 2, but a little longer to check how it affects component auto height this is short description 2, but a little longer to check how it affects component auto height",
     imagePath: "/constructjs/assets/CAROUSEL2.jpg",
   },
   {

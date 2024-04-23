@@ -62,10 +62,10 @@ const AboutUsSection = () => {
 
 const WaterproofingSection = () => (
   <div className="sisteme-section" id="#waterproofing">
-    <Carousel>
+    <Carousel carouselLength={CAROUSEL_ITEMS.length}>
       {CAROUSEL_ITEMS.map(
-        ({ imagePath, title, shortDescription, longDescription }) => (
-          <CarouselItem>
+        ({ imagePath, title, shortDescription, longDescription, id }) => (
+          <CarouselItem key={id}>
             <FlipCard>
               <FlipCardBack>
                 <div className="dashboard-flip-card-back">

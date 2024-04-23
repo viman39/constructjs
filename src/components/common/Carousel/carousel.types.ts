@@ -1,4 +1,5 @@
 export type CarouselItemType = {
+  id: number;
   title: string;
   longDescription?: string;
   shortDescription?: string;
@@ -11,4 +12,5 @@ export type CarouselItemProps = {
 
 export type CarouselProps = {
   children: React.ReactNode[];
+  carouselLength: number;
 };

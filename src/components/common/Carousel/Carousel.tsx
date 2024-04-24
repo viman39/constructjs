@@ -75,7 +75,9 @@ export const Carousel: React.FC<CarouselProps> = ({
           )}
           {children.map((item, index) => (
             <div
-              className="carouselItem-wrapper"
+              className={`carouselItem-wrapper ${
+                index === activeItemIndex ? "carouselItem-active" : ""
+              }`}
               style={{
                 translate: `${-100 * activeItemIndex}%`,
               }}

@@ -10,7 +10,7 @@ export const FlipCard: React.FC<FlipCardProps> = ({ children }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleFlipCard = () => {
-    setIsFlipped((isFlipped) => !isFlipped);
+    setIsFlipped(!isFlipped);
   };
 
   const handleFlipBack = () => {

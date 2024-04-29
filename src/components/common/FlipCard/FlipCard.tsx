@@ -6,7 +6,7 @@ import {
   FlipCardProps,
 } from "./flipCard.types";
 
-export const FlipCard: React.FC<FlipCardProps> = ({ children }) => {
+export const FlipCard: React.FC<FlipCardProps> = ({ children, className }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleFlipCard = () => {
@@ -23,7 +23,9 @@ export const FlipCard: React.FC<FlipCardProps> = ({ children }) => {
 
   return (
     <div
-      className={`flip-card ${isFlipped ? "flip-card-hover" : ""}`}
+      className={`flip-card ${isFlipped ? "flip-card-hover" : ""} ${
+        className ? className : ""
+      }`}
       onClick={handleFlipCard}
       onMouseOver={handleFlipBack}
       onMouseOut={handleFlipFront}

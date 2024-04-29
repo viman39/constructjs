@@ -66,7 +66,7 @@ const WaterproofingSection = () => (
       {CAROUSEL_ITEMS.map(
         ({ imagePath, title, shortDescription, longDescription, id }) => (
           <CarouselItem key={id}>
-            <FlipCard>
+            <FlipCard className="flip-card-shadow">
               <FlipCardBack>
                 <div className="dashboard-flip-card-back">
                   <p>{longDescription}</p>

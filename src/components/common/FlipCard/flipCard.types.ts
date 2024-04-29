@@ -1,6 +1,4 @@
-export type FlipCardProps = {
-  children: React.ReactNode;
-};
+export type FlipCardProps = React.HTMLProps<HTMLDivElement>;
 
 export type FlipCardFrontProps = {
   children: React.ReactNode;

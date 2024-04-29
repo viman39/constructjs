@@ -1,0 +1,17 @@
+@import "../../../variables.scss";
+
+.card {
+  border: 2px $logo-primary solid;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px -8px $logo-primary;
+  display: block;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba($logo-primary, 0.075);
+  }
+
+  &.hidden {
+    display: none;
+  }
+}

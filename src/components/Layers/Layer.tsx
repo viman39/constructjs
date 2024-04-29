@@ -14,7 +14,7 @@ type WallLayerProps = React.HTMLProps<HTMLDivElement> & {
 export const WallLayer: React.FC<WallLayerProps> = ({ layer, className }) => {
   const { updateLayer, removeLayer } = useWallContext();
   const { id, material, thickness } = layer;
-  const [price, setPrice] = useState<number>(material?.price ?? 0);
+  const [price, setPrice] = useState(material?.price ?? 0);
 
   useEffect(() => {
     setPrice(material?.price ?? 0);

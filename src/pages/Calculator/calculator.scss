@@ -1,0 +1,9 @@
+@import "../../variables.scss";
+
+.calculator {
+  width: 50%;
+
+  @media (max-width: $layout-breakpoint-tablet) {
+    width: 90%;
+  }
+}

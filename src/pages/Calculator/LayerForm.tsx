@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
-import { Select } from "../common/Select/Select";
-import { Input } from "../common/Input/Input";
-import { Button } from "../common/Button/Button";
-import { Layer } from "./layers.types";
 import { useWallContext } from "../../context/Wall.context";
 import { mockMaterialOptions } from "../../__mocks__/materialMocks";
 import { numberFormat } from "../../utils/localization";
+import { Select } from "../../components/common/Select/Select";
+import { Input } from "../../components/common/Input/Input";
+import { Button } from "../../components/common/Button/Button";
+import { Layer } from "./calculator.types";
 
-type WallLayerProps = React.HTMLProps<HTMLDivElement> & {
+type LayerFormProps = React.HTMLProps<HTMLDivElement> & {
   layer: Layer;
 };
 
-export const WallLayer: React.FC<WallLayerProps> = ({ layer, className }) => {
+export const LayerForm: React.FC<LayerFormProps> = ({ layer, className }) => {
   const { updateLayer, removeLayer } = useWallContext();
   const { id, material, thickness } = layer;
   const [price, setPrice] = useState(material?.price ?? 0);

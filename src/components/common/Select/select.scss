@@ -1,7 +1,9 @@
+@import "../../../variables.scss";
+
 .select {
   padding: 8px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid $secondary;
   border-radius: 4px;
   outline: none;
   cursor: pointer;
@@ -9,15 +11,9 @@
 
   &:hover,
   &:focus {
-    border-color: #3498db;
+    border-color: $logo-primary;
   }
 
-  /* Remove default arrow icon in Firefox */
-  &::-moz-focus-inner {
-    border: 0;
-  }
-
-  /* Customize the appearance of the dropdown arrow */
   &::after {
     content: "▼"; /* Unicode character for a downward-pointing triangle */
     position: absolute;

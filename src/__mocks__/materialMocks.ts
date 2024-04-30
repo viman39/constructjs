@@ -1,4 +1,4 @@
-import { Material } from "../components/Layers/layers.types";
+import { Material } from "../pages/Calculator/calculator.types";
 
 export const mockMaterials: Material[] = [
   { id: "0", name: "Selecteaza", price: 0 },

@@ -1,10 +1,10 @@
-import { WallLayer } from "../../components/Layers/Layer";
 import { Wall } from "../../components/Wall/Wall";
 import { Button } from "../../components/common/Button/Button";
 import { WallContextProvider } from "../../context/Wall.context";
 import { useWallContext } from "../../context/Wall.context";
 import { PlusCircle } from "react-feather";
 import { Card } from "../../components/common/Card/Card";
+import { LayerForm } from "./LayerForm";
 import "./calculator.scss";
 
 const Layers = () => {
@@ -13,7 +13,7 @@ const Layers = () => {
   return (
     <>
       {layers.map((layer) => (
-        <WallLayer layer={layer} key={layer.id} className="mb-sm" />
+        <LayerForm layer={layer} key={layer.id} className="mb-sm" />
       ))}
       <Button onClick={addLayer} color="primary" fullWidth={true}>
         <div className="my-xs">

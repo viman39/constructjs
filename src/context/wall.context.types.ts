@@ -1,4 +1,4 @@
-import { Layer } from "../components/Layers/layers.types";
+import { Layer } from "../pages/Calculator/calculator.types";
 
 export type WallContextProviderProps = {
   children: React.ReactNode;

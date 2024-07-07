@@ -6,6 +6,7 @@ import { Select } from "../../components/common/Select/Select";
 import { Input } from "../../components/common/Input/Input";
 import { Button } from "../../components/common/Button/Button";
 import { Layer } from "./calculator.types";
+import "./calculator.scss";
 
 type LayerFormProps = React.HTMLProps<HTMLDivElement> & {
   layer: Layer;
@@ -27,8 +28,8 @@ export const LayerForm: React.FC<LayerFormProps> = ({ layer, className }) => {
         options={mockMaterialOptions}
         onChange={(e) => updateLayer(id, { material: e.target.value })}
       />
-      <br></br>
       <Input
+        className="input-width"
         placeholder="grosime"
         type="number"
         onChange={(e) =>
@@ -38,6 +39,7 @@ export const LayerForm: React.FC<LayerFormProps> = ({ layer, className }) => {
         }
       />
       <Input
+        className="input-width"
         placeholder="pret"
         type="number"
         value={price.toString()}

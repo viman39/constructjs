@@ -1,9 +1,11 @@
 @import "../../variables.scss";
 
 .calculator {
-  width: 50%;
+  @media (min-width: $layout-breakpoint-tablet) {
+    width: 50%;
+  }
 
-  @media (max-width: $layout-breakpoint-tablet) {
-    width: 90%;
+  .input-width {
+    width: 50%;
   }
 }
